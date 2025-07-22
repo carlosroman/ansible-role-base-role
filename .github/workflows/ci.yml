@@ -1,0 +1,56 @@
+#SPDX-License-Identifier: MIT-0
+---
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions: read-all
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Lint
+        run: make lint
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: ${{ !contains(github.event_name, 'pull_request') }}
+      matrix:
+        distro:
+          - debian11
+          - debian12
+          - ubuntu2204
+          - ubuntu2404
+          - rockylinux9
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run tests
+        run: make test
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
+          ANSIBLE_ALLOW_BROKEN_CONDITIONALS: '1'
+          MOLECULE_DISTRO: ${{ matrix.distro }}

@@ -1,0 +1,16 @@
+#SPDX-License-Identifier: MIT-0
+---
+galaxy_info:
+  role_name: base_role
+  namespace: carlosroman
+  author: Carlos Roman
+  description: Base role for all roles
+  company: Cliche Solutions Ltd
+
+  license: license (MIT)
+
+  min_ansible_version: 2.10
+
+  galaxy_tags: []
+
+dependencies: []

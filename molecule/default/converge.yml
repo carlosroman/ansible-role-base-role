@@ -13,6 +13,6 @@
     - role: carlosroman.base_role
 
   post_tasks:
-    - name: Debug
+    - name: Verify
       ansible.builtin.debug:
-        msg: "Add you verify tasks here."
+        msg: "Add your verification tasks here."

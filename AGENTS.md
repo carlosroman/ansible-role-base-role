@@ -53,3 +53,14 @@ Config in `.yamllint`: extends default, line-length max 120 (warning level). Ign
 ## License
 
 This role is licensed under MIT. See `LICENSE` file for details.
+
+## Repository Management
+
+- **Debian/Ubuntu**: See `CONVENTIONS-DEBIAN.md` for APT repository patterns (uses `deb822_repository`)
+- **RedHat/CentOS/Rocky/Amazon Linux**: See `CONVENTIONS-REDHAT.md` for YUM/DNF repository patterns (uses `yum_repository`)
+
+## Commit Messages
+
+This role uses Conventional Commits format. See `.agents/skills/conventional-commits/SKILL.md` for the skill definition.
+
+Trigger with: "commit these changes" or similar requests.

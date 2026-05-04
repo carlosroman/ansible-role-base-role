@@ -36,6 +36,7 @@ jobs:
           - debian12
           - ubuntu2204
           - ubuntu2404
+          - ubuntu2604
           - rockylinux9
     steps:
       - name: Checkout code

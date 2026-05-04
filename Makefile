@@ -4,6 +4,10 @@
 test :
 	@(molecule test)
 
+.PHONY : test/ubuntu-2604
+test/ubuntu-2604 :
+	@(MOLECULE_DISTRO=ubuntu2604 molecule test)
+
 .PHONY : test/ubuntu-2404
 test/ubuntu-2404 :
 	@(MOLECULE_DISTRO=ubuntu2404 molecule test)
@@ -29,6 +33,7 @@ test/amazonlinux-2023 :
 	@(MOLECULE_DISTRO=amazonlinux2023 molecule test)
 
 .PHONY : test/all
+test/all : test/ubuntu-2604
 test/all : test/ubuntu-2404
 test/all : test/ubuntu-2204
 test/all : test/debian-12

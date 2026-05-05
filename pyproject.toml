@@ -1,0 +1,24 @@
+[project]
+name = "ansible-base-role"
+license-files = ["LICENSE"]
+readme = "README.md"
+requires-python = ">=3.12"
+version = "0.1.0"
+dependencies = [
+  "ansible-core>=2.20",
+]
+
+[dependency-groups]
+test = [
+    "molecule",
+    "molecule-plugins",
+    "docker",
+]
+lint = [
+    "ansible-lint",
+    "yamllint",
+]
+dev = [
+    { include-group = "test" },
+    { include-group = "lint" },
+]

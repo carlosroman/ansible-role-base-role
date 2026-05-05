@@ -33,10 +33,12 @@ jobs:
         distro:
           - debian11
           - debian12
+          - debian13
           - ubuntu2204
           - ubuntu2404
           - ubuntu2604
           - rockylinux9
+          - rockylinux10
     steps:
       - name: Checkout code
         uses: actions/checkout@v6

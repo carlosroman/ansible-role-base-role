@@ -5,18 +5,18 @@ readme = "README.md"
 requires-python = ">=3.12"
 version = "0.1.0"
 dependencies = [
-  "ansible-core>=2.20",
+  "ansible-core>=2.21",
 ]
 
 [dependency-groups]
 test = [
-    "molecule",
-    "molecule-plugins",
-    "docker",
+    "molecule>=26.9",
+    "molecule-plugins>=26.9",
+    "docker>=7.2",
 ]
 lint = [
-    "ansible-lint",
-    "yamllint",
+    "ansible-lint>=26.9",
+    "yamllint>=1.38",
 ]
 dev = [
     { include-group = "test" },

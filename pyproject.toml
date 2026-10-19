@@ -1,5 +1,6 @@
 [project]
 name = "ansible-base-role"
+license = "MIT"
 license-files = ["LICENSE"]
 readme = "README.md"
 requires-python = ">=3.12"

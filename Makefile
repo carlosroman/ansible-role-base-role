@@ -30,10 +30,6 @@ test/debian-13 :
 test/debian-12 :
 	@(MOLECULE_DISTRO=debian12 ${MOLECULE_TEST})
 
-.PHONY : test/debian-11
-test/debian-11 :
-	@(MOLECULE_DISTRO=debian11 ${MOLECULE_TEST})
-
 .PHONY : test/rocky-9
 test/rocky-9 :
 	@(MOLECULE_DISTRO=rockylinux9 ${MOLECULE_TEST})
@@ -56,7 +52,6 @@ test/all : test/ubuntu-2404
 test/all : test/ubuntu-2204
 test/all : test/debian-13
 test/all : test/debian-12
-test/all : test/debian-11
 test/all : test/fedora-44
 test/all : test/rocky-10
 test/all : test/rocky-9

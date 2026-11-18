@@ -17,7 +17,7 @@ All driven by `make`:
 | `make test/ubuntu-2404` | Test against a specific distro |
 | `make test/all` | Test against all 7 distros sequentially |
 
-Available distro targets: `ubuntu-2604`, `ubuntu-2404`, `ubuntu-2204`, `debian-12`, `debian-11`, `rocky-9`, `amazonlinux-2023`.
+Available distro targets: `ubuntu-2604`, `ubuntu-2404`, `ubuntu-2204`, `debian-12`, `rocky-9`, `amazonlinux-2023`.
 
 Override distro without a make target: `MOLECULE_DISTRO=debian12 molecule test`.
 
@@ -32,7 +32,7 @@ Override distro without a make target: `MOLECULE_DISTRO=debian12 molecule test`.
 
 Two jobs run on push/PR:
 1. **Lint** — `make lint`
-2. **Test** — `make test` across matrix: `debian11`, `debian12`, `ubuntu2204`, `ubuntu2404`, `ubuntu2604`, `rockylinux9`
+2. **Test** — `make test` across matrix: `debian12`, `ubuntu2204`, `ubuntu2404`, `ubuntu2604`, `rockylinux9`
 
 ## Dependencies
 

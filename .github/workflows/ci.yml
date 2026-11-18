@@ -36,7 +36,6 @@ jobs:
           - ubuntu2204
           - debian13
           - debian12
-          - debian11
           - fedora44
           - rockylinux10
           - rockylinux9
